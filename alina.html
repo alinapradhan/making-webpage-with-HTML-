@@ -2,12 +2,98 @@
 <html>
 
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+        }
+        .container {
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 30px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .content {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
 </head>
-
 <body>
-    <h1>hgvhgvjhh</h1>
-    <h2>htfuyf</h2>
+    <header>
+        <h1>Welcome to My Web Design Page</h1>
+    </header>
+
+    <div class="container">
+        <button class="btn" onclick="showContent('skills')">Skills</button>
+        <button class="btn" onclick="showContent('extracurricular')">Extracurricular Activities</button>
+        <button class="btn" onclick="showContent('projects')">Projects</button>
+        <button class="btn" onclick="showContent('contact')">Contact Me</button>
+
+        <div id="skills" class="content">
+            <h2>Skills</h2>
+            <p>HTML, CSS, JavaScript, Python, Web Design, Graphic Design</p>
+        </div>
+
+        <div id="extracurricular" class="content">
+            <h2>Extracurricular Activities</h2>
+            <p>Sports, Debate Club, Volunteering, Photography</p>
+        </div>
+
+        <div id="projects" class="content">
+            <h2>Projects</h2>
+            <p>Portfolio Website, Blogging Platform, E-commerce Store</p>
+        </div>
+
+        <div id="contact" class="content">
+            <h2>Contact Me</h2>
+            <p>Email: example@domain.com</p>
+            <p>Phone: 123-456-7890</p>
+        </div>
+    </div>
+
+    <script>
+        function showContent(sectionId) {
+            const sections = document.querySelectorAll('.content');
+            sections.forEach(section => section.style.display = 'none');
+
+            const target = document.getElementById(sectionId);
+            if (target) {
+                target.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
+
